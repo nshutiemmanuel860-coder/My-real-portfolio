@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Projects - NSHUTI Emmanuel</title>
+    <link rel="icon" href="target.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .projects-hero {
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #c64600 100%);
+            color: white;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+        
+        .projects-hero h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .projects-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .projects-content {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-img {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .project-info {
+            padding: 30px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 20px 0;
+        }
+        
+        .tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .project-link:hover {
+            color: var(--secondary-color);
+            gap: 12px;
+        }
+        
+        .coming-soon {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+        
+        .coming-soon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .coming-card {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .coming-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .coming-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">NSHUTI<span>.</span></a>
+            
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="projects-hero">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Explore my programming projects and web development work</p>
+        </div>
+    </section>
+
+    <section class="projects-content">
+        <div class="container">
+            <h2>Completed Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>C++ Calculator</h3>
+                        <p>A console-based calculator application built with C++ that performs basic arithmetic operations. Features include addition, subtraction, multiplication, division, and error handling for invalid inputs.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Console App</span>
+                        </div>
+                        <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Student Management System</h3>
+                        <p>A C++ application for managing student records. Allows adding, updating, deleting, and searching student information. Uses file handling to store data persistently between sessions.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">File Handling</span>
+                            <span class="tag">Data Management</span>
+                        </div>
+                        <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>This responsive portfolio website built with HTML, CSS, and JavaScript. Features dark/light mode, smooth animations, and mobile-friendly design. Showcases my skills and projects effectively.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <a href="index.html" class="project-link">View Live <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Password Strength Checker</h3>
+                        <p>A JavaScript tool that evaluates password strength based on length, character variety, and common patterns. Provides feedback to help users create stronger passwords for better security.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Web Tool</span>
+                        </div>
+                        <a href="#" class="project-link">Try Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coming-soon">
+        <div class="container">
+            <h2>Projects in Progress</h2>
+            <div class="coming-soon-grid">
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Website</h3>
+                    <p>A full-featured online store with product catalog, shopping cart, and checkout system using React and PHP</p>
+                </div>
+                
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Manager App</h3>
+                    <p>A web-based task management application with user authentication, deadlines, and progress tracking</p>
+                </div>
+                
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Scanner</h3>
+                    <p>A Python-based network scanning tool for identifying devices and open ports on local networks</p>
+                </div>
+                
+                <div class="coming-card">
+                    <div class="coming-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Personal Blog</h3>
+                    <p>A blogging platform with content management system, comments, and user profiles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">NSHUTI<span>.</span></div>
+                    <p class="footer-text">IT Student at King David Academy passionate about software development and cybersecurity</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="education.html" class="footer-link">Education</a></li>
+                        <li><a href="projects.html" class="footer-link">Projects</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/nshutiemmanuel860-coder/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nshuti__wagakira/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:nshutiemmanuel860@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> NSHUTI Emmanuel. All Rights Reserved.</p>
+                <p class="footer-contact">Phone: +250 783805137 | Location: Rubavu, Rwanda</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Education - NSHUTI Emmanuel</title>
+    <link rel="icon" href="target.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .education-hero {
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+        
+        .education-hero h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .education-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .education-content {
+            padding: 80px 0;
+            background-color: var(--background-color);
+        }
+        
+        .education-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .education-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            text-align: right;
+            padding-right: 70px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            padding-left: 70px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+        
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            width: calc(50% - 25px);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .education-timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+                padding-left: 30px;
+                text-align: left;
+            }
+            
+            .timeline-icon {
+                left: 30px;
+            }
+        }
+        
+        .goals-section {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .goal-card {
+            background-color: var(--light-color);
+            padding: 30px;
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .goal-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .goal-card h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">NSHUTI<span>.</span></a>
+            
+            <div class="nav-center">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="education-hero">
+        <div class="container">
+            <h1>Education & Goals</h1>
+            <p>My academic journey and aspirations in technology and software development</p>
+        </div>
+    </section>
+
+    <section class="education-content">
+        <div class="container">
+            <h2>Academic Journey</h2>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - Present</span>
+                        <h3>King David Academy</h3>
+                        <p>Currently studying Information Technology with a focus on software development and cybersecurity. My coursework includes advanced programming concepts, web technologies, computer systems fundamentals, and network security principles.</p>
+                        <p>At King David Academy, I'm building a strong foundation in computer science while developing practical skills through hands-on projects and laboratory work.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2022</span>
+                        <h3>Programming Foundations</h3>
+                        <p>Started my programming journey with C language, learning fundamental concepts like variables, data types, control structures, functions, and pointers. This foundation helped me understand how software works at a basic level.</p>
+                        <p>Progressed to C++ to learn object-oriented programming, which introduced me to classes, objects, inheritance, and polymorphism - essential concepts for modern software development.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3>Web Development Skills</h3>
+                        <p>Expanded my skills to web development, starting with HTML for structure, CSS for styling, and JavaScript for interactivity. Learned responsive design principles to create websites that work on all devices.</p>
+                        <p>Currently exploring front-end frameworks and back-end technologies to become a full-stack developer capable of building complete web applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="goals-section">
+        <div class="container">
+            <h2>Career Goals & Aspirations</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Developer</h3>
+                    <p>My primary goal is to become a proficient software developer, capable of designing, developing, and maintaining applications that solve real-world problems. I want to specialize in creating efficient and user-friendly software solutions.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity Specialist</h3>
+                    <p>I aim to develop expertise in cybersecurity, focusing on ethical hacking and security assessment. Understanding system vulnerabilities and protection methods is crucial for developing secure applications in today's digital landscape.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Working towards becoming a full-stack developer by mastering both front-end and back-end technologies. This includes learning React for front-end, PHP for back-end, and database management for complete application development.</p>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Industry Contribution</h3>
+                    <p>I aspire to contribute to Rwanda's growing tech industry by applying my skills to local challenges. My goal is to participate in projects that leverage technology for education, business, and community development in Rwanda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">NSHUTI<span>.</span></div>
+                    <p class="footer-text">IT Student at King David Academy passionate about software development and cybersecurity</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="education.html" class="footer-link">Education</a></li>
+                        <li><a href="projects.html" class="footer-link">Projects</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/nshutiemmanuel860-coder/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nshuti__wagakira/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:nshutiemmanuel860@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> NSHUTI Emmanuel. All Rights Reserved.</p>
+                <p class="footer-contact">Phone: +250 783805137 | Location: Rubavu, Rwanda</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
